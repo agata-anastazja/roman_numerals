@@ -1,20 +1,17 @@
 require 'roman_numerals'
 
-describe "roman_numerals" do
+ describe RomanNumerals do
 
   subject(:roman) {described_class.new}
+  context "Checking for different length integers"  do
 
-  it "should return I when passed 1" do
-    expect(roman_numerals(1)).to eq "I"
-  end
+    it "returns 1 when passed 1" do
+      expect(roman.getting_ones(1)).to eq 1
+    end
 
-  it "should return I when passed 1" do
-    expect(roman_numerals(2)).to eq "II"
-  end
+    it "returns 3 when passed 36" do
+      expect(roman.getting_tens(36)).to eq 3
+    end
 
-  it "should return I when passed 5" do
-    expect(roman_numerals(5)).to eq "V"
-  end
-
-
+ end
 end
